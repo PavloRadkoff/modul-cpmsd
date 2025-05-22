@@ -1,0 +1,34 @@
+```css
+.doctor-appointment-form {
+    margin: 0 auto;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.doctor-appointment-form h3 {
+    color: var(--primary-color, #007bff);
+    margin-bottom: 20px;
+}
+
+.doctor-appointment-form .form-select,
+.doctor-appointment-form .form-control {
+    width: 100%;
+}
+
+.doctor-appointment-form .btn-primary {
+    background-color: var(--button-color, #28a745);
+    border-color: var(--button-color, #28a745);
+}
+
+.doctor-appointment-form .day-slots .btn-group {
+    flex-wrap: wrap;
+}
+
+@media (max-width: 576px) {
+    .doctor-appointment-form .btn-sm {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+}
+```

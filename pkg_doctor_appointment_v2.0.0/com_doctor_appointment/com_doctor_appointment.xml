@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="5.0" method="upgrade">
+    <name>com_doctor_appointment</name>
+    <author>Your Name</author>
+    <version>2.0.0</version>
+    <files>
+        <filename>controller.php</filename>
+        <folder>models</folder>
+        <folder>views</folder>
+    </files>
+    <administration>
+        <menu>Doctor Appointment</menu>
+    </administration>
+</extension>

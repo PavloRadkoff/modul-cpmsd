@@ -1,0 +1,128 @@
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="5.0" client="site" method="upgrade">
+    <name>MOD_DOCTOR_APPOINTMENT</name>
+    <author>Your Name</author>
+    <creationDate>May 2025</creationDate>
+    <copyright>Copyright (C) 2025 Your Name. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>your-email@example.com</authorEmail>
+    <authorUrl>your-website.com</authorUrl>
+    <version>2.0.0</version>
+    <description>MOD_DOCTOR_APPOINTMENT_XML_DESCRIPTION</description>
+
+    <files>
+        <filename module="mod_doctor_appointment">mod_doctor_appointment.php</filename>
+        <filename>helper.php</filename>
+        <folder>tmpl</folder>
+        <folder>language</folder>
+        <folder>sql</folder>
+        <folder>css</folder>
+    </files>
+
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.mod_doctor_appointment.ini</language>
+        <language tag="en-GB">en-GB/en-GB.mod_doctor_appointment.sys.ini</language>
+        <language tag="uk-UA">uk-UA/uk-UA.mod_doctor_appointment.ini</language>
+        <language tag="uk-UA">uk-UA/uk-UA.mod_doctor_appointment.sys.ini</language>
+    </languages>
+
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8mb4">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8mb4">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                    name="doctor_email"
+                    type="email"
+                    label="MOD_DOCTOR_APPOINTMENT_FIELD_DOCTOR_EMAIL_LABEL"
+                    description="MOD_DOCTOR_APPOINTMENT_FIELD_DOCTOR_EMAIL_DESC"
+                    validate="email"
+                    required="true"
+                />
+                <field
+                    name="available_days"
+                    type="list"
+                    multiple="true"
+                    label="MOD_DOCTOR_APPOINTMENT_FIELD_AVAILABLE_DAYS_LABEL"
+                    description="MOD_DOCTOR_APPOINTMENT_FIELD_AVAILABLE_DAYS_DESC"
+                    default="1,2,3,4,5">
+                    <option value="1">MOD_DOCTOR_APPOINTMENT_DAY_MONDAY</option>
+                    <option value="2">MOD_DOCTOR_APPOINTMENT_DAY_TUESDAY</option>
+                    <option value="3">MOD_DOCTOR_APPOINTMENT_DAY_WEDNESDAY</option>
+                    <option value="4">MOD_DOCTOR_APPOINTMENT_DAY_THURSDAY</option>
+                    <option value="5">MOD_DOCTOR_APPOINTMENT_DAY_FRIDAY</option>
+                    <option value="6">MOD_DOCTOR_APPOINTMENT_DAY_SATURDAY</option>
+                    <option value="0">MOD_DOCTOR_APPOINTMENT_DAY_SUNDAY</option>
+                </field>
+                <field
+                    name="start_time"
+                    type="time"
+                    label="MOD_DOCTOR_APPOINTMENT_FIELD_START_TIME_LABEL"
+                    description="MOD_DOCTOR_APPOINTMENT_FIELD_START_TIME_DESC"
+                    default="09:00"
+                    format="H:i"
+                />
+                <field
+                    name="end_time"
+                    type="time"
+                    label="MOD_DOCTOR_APPOINTMENT_FIELD_END_TIME_LABEL"
+                    description="MOD_DOCTOR_APPOINTMENT_FIELD_END_TIME_DESC"
+                    default="17:00"
+                    format="H:i"
+                />
+                <field
+                    name="slot_duration"
+                    type="integer"
+                    label="MOD_DOCTOR_APPOINTMENT_FIELD_SLOT_DURATION_LABEL"
+                    description="MOD_DOCTOR_APPOINTMENT_FIELD_SLOT_DURATION_DESC"
+                    default="30"
+                    min="5"
+                    step="5"
+                    filter="integer"
+                />
+                <field
+                    name="days_in_advance"
+                    type="integer"
+                    label="MOD_DOCTOR_APPOINTMENT_FIELD_DAYS_IN_ADVANCE_LABEL"
+                    description="MOD_DOCTOR_APPOINTMENT_FIELD_DAYS_IN_ADVANCE_DESC"
+                    default="7"
+                    min="1"
+                    filter="integer"
+                />
+                <field
+                    name="form_width"
+                    type="text"
+                    label="MOD_DOCTOR_APPOINTMENT_FIELD_FORM_WIDTH_LABEL"
+                    description="MOD_DOCTOR_APPOINTMENT_FIELD_FORM_WIDTH_DESC"
+                    default="100%"
+                    filter="string"
+                />
+                <field
+                    name="primary_color"
+                    type="color"
+                    label="MOD_DOCTOR_APPOINTMENT_FIELD_PRIMARY_COLOR_LABEL"
+                    description="MOD_DOCTOR_APPOINTMENT_FIELD_PRIMARY_COLOR_DESC"
+                    default="#007bff"
+                />
+                <field
+                    name="button_color"
+                    type="color"
+                    label="MOD_DOCTOR_APPOINTMENT_FIELD_BUTTON_COLOR_LABEL"
+                    description="MOD_DOCTOR_APPOINTMENT_FIELD_BUTTON_COLOR_DESC"
+                    default="#28a745"
+                />
+            </fieldset>
+        </fields>
+    </config>
+</extension>
+```

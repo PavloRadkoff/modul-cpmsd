@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="package" version="5.0">
+    <name>pkg_doctor_appointment</name>
+    <author>Your Name</author>
+    <creationDate>May 2025</creationDate>
+    <copyright>Copyright (C) 2025 Your Name. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>your-email@example.com</authorEmail>
+    <authorUrl>your-website.com</authorUrl>
+    <version>2.0.0</version>
+    <description>Пакет із компонентом і модулем для запису до лікаря</description>
+    <packagename>pkg_doctor_appointment</packagename>
+    <files>
+        <folder>com_doctor_appointment</folder>
+        <folder>mod_doctor_appointment</folder>
+    </files>
+    <updateservers>
+        <server type="extension" name="Doctor Appointment Update Server">https://your-website.com/updates</server>
+    </updateservers>
+</extension>

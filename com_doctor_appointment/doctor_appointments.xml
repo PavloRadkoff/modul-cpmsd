@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="5.0" method="upgrade">
+    <name>COM_DOCTOR_APPOINTMENTS</name>
+    <author>Your Name</author>
+    <creationDate>May 2025</creationDate>
+    <copyright>Copyright (C) 2025 Your Name. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>your-email@example.com</authorEmail>
+    <authorUrl>your-website.com</authorUrl>
+    <version>1.0.0</version>
+    <description>COM_DOCTOR_APPOINTMENTS_XML_DESCRIPTION</description>
+
+    <files folder="components/com_doctor_appointments">
+        <filename>controller.php</filename>
+        <filename>doctor_appointments.php</filename>
+        <folder>models</folder>
+        <folder>views</folder>
+        <folder>tables</folder>
+        <folder>sql</folder>
+        <folder>language</folder>
+    </files>
+
+    <administration>
+        <menu>COM_DOCTOR_APPOINTMENTS</menu>
+        <files folder="components/com_doctor_appointments">
+            <filename>controller.php</filename>
+            <folder>models</folder>
+            <folder>views</folder>
+            <folder>tables</folder>
+        </files>
+        <languages folder="language">
+            <language tag="en-GB">en-GB/en-GB.com_doctor_appointments.ini</language>
+            <language tag="en-GB">en-GB/en-GB.com_doctor_appointments.sys.ini</language>
+            <language tag="uk-UA">uk-UA/uk-UA.com_doctor_appointments.ini</language>
+            <language tag="uk-UA">uk-UA/uk-UA.com_doctor_appointments.sys.ini</language>
+        </languages>
+    </administration>
+
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8mb4">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8mb4">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+</extension>
